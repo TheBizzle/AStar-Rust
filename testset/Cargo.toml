@@ -1,0 +1,27 @@
+[package]
+name = "testset"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.96"
+
+authors = ["TheBizzle <jason.bertsche@gmail.com"]
+description = "Tests for PathFindingCore"
+license = "BSD-3"
+repository = "https://github.com/TheBizzle/PathFindingCore-Rust"
+readme = "README.md"
+
+keywords = ["astar", "maze", "navigation", "pathfinding", "tilemap"]
+categories = ["algorithms"]
+
+publish = false
+
+[dependencies]
+core = { path = "../core" }
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = "deny"
+pedantic = "deny"
+nursery = "deny"
