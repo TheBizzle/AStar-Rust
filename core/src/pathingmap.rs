@@ -78,9 +78,9 @@ impl PathingMap {
     if let Some(&max_coord) = coords.last() {
       let mut lines: Vec<String> = Vec::with_capacity(max_coord.y);
 
-      for y in 0..(max_coord.y) {
+      for y in 0..=(max_coord.y) {
         let mut str = String::with_capacity(max_coord.x);
-        for x in 0..(max_coord.x) {
+        for x in 0..=(max_coord.x) {
           let coord = Coordinate { x, y };
           let msg = format!("Coordinate {max_coord:?} does not exist!");
           let t = self.grid.map.get(&coord).expect(&msg);
