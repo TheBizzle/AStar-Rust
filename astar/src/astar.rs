@@ -85,12 +85,10 @@ fn prime_next_step(step_data: &mut StepData) -> bool {
   if let Some(next_thing) = step_data.queue.pop() {
     let next_item = next_thing.item;
     let msg = &format!("Queued item's coord must exist on map: {next_item:?}");
-    let next_data = step_data.loc_data_map.get_mut(&next_item.coord).expect(msg);
+    let next_data = step_data.loc_data_map.get(&next_item.coord).expect(msg);
     if next_data.was_visited {
       prime_next_step(step_data)
     } else {
-      next_data.breadcrumb_opt = Some(next_item.breadcrumb);
-      next_data.cost_opt = Some(next_item.cost);
       step_data.current_coord = next_item.coord;
       true
     }
@@ -102,21 +100,22 @@ fn prime_next_step(step_data: &mut StepData) -> bool {
 fn enqueue_neighbor(neighbor: Coordinate, step_data: &mut StepData) {
   let current_coord = step_data.current_coord;
   let msg1 = &format!("Current coord must exist on map: {current_coord:?}");
-  let current_loc = step_data.loc_data_map.get(&current_coord).expect(msg1);
+  let current_data = step_data.loc_data_map.get(&current_coord).expect(msg1);
+  let msg2 = &format!("Current location must have a registered cost by now: {current_data:?}");
+  let current_cost = *current_data.cost_opt.as_ref().expect(msg2);
+  let msg3 = &format!("A breadcrumb trail must have a trail of its own: {current_data:?}");
+  let current_breadcrumb = Rc::clone(current_data.breadcrumb_opt.as_ref().expect(msg3));
+  let new_cost = current_cost + 1.0;
 
-  let msg2 = &format!("Current location must have a registered cost by now: {current_loc:?}");
-  let new_cost = current_loc.cost_opt.as_ref().expect(msg2) + 1.0;
+  let msg4 = &format!("Neighbor must be a real location: {neighbor:?}");
+  let neighbor_data = step_data.loc_data_map.get_mut(&neighbor).expect(msg4);
 
-  let msg3 = &format!("Neighbor must be a real location: {neighbor:?}");
-  let cost_opt = step_data.loc_data_map.get(&neighbor).expect(msg3).cost_opt;
-
-  let msg4 = &format!("Neighbor must have a registered cost by now: {neighbor:?}");
-  if cost_opt.is_none() || new_cost < cost_opt.expect(msg4) {
-    let msg5 = &format!("A breadcrumb trail must have a trail of its own: {current_loc:?}");
-    let h = step_data.heuristic.clone().eval(step_data.goal_coord, neighbor);
-    let from = current_loc.breadcrumb_opt.as_ref().expect(msg5);
-    let breadcrumb = Rc::new(Crumb { to: neighbor, from: Rc::clone(from) });
+  if neighbor_data.cost_opt.is_none_or(|old_cost| new_cost < old_cost) {
+    let breadcrumb = Rc::new(Crumb { to: neighbor, from: current_breadcrumb });
+    neighbor_data.cost_opt = Some(new_cost);
+    neighbor_data.breadcrumb_opt = Some(Rc::clone(&breadcrumb));
     let mini_loc = MiniLoc { breadcrumb, coord: neighbor, cost: new_cost };
+    let h = step_data.heuristic.clone().eval(step_data.goal_coord, neighbor);
     step_data.queue.push(new_cost + h, mini_loc);
   }
 }
