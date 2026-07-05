@@ -3,15 +3,18 @@ use std::collections::HashMap;
 use super::coordinate::Coordinate;
 use super::terrain::Terrain::{self, Goal, Myself};
 
+#[derive(Debug)]
 pub struct PathingGrid {
   pub map: HashMap<Coordinate, Terrain>,
 }
 
+#[derive(Debug)]
 pub struct PathingMapString {
   pub contents: String,
   pub delim: String,
 }
 
+#[derive(Debug)]
 pub struct PathingMapData {
   pub start: Coordinate,
   pub goal: Coordinate,

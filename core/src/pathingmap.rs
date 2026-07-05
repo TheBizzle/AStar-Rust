@@ -2,6 +2,7 @@ use super::coordinate::Coordinate;
 use super::interpreter::PathingGrid;
 use super::terrain::Terrain::{self, Goal, Myself, Path, Query};
 
+#[derive(Debug)]
 pub struct PathingMap {
   pub grid: PathingGrid,
 }

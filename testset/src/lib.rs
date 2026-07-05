@@ -45,6 +45,7 @@ pub fn all_maps() -> [PathingMapTest; 39] {
   ]
 }
 
+#[derive(Debug)]
 pub struct PathingMapTest {
   pub dist: Option<u32>,
   pub mapstring: PathingMapString,
