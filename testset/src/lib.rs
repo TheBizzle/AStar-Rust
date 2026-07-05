@@ -52,7 +52,7 @@ pub struct PathingMapTest {
 }
 
 fn pms(delim: &str, contents: &str) -> PathingMapString {
-  PathingMapString { contents: contents[1..].to_string(), delim: format!("{delim}\n") }
+  PathingMapString { contents: contents[0..].to_string(), delim: format!("{delim}\n") }
 }
 
 fn full_map_1() -> PathingMapTest {
