@@ -1,4 +1,5 @@
 use std::cmp::Ordering::{self, Equal};
+use std::rc::Rc;
 
 #[derive(Debug, Clone, Copy, Hash, PartialEq, Eq)]
 pub struct Coordinate {
@@ -24,7 +25,7 @@ impl PartialOrd for Coordinate {
 #[derive(Debug)]
 pub enum Breadcrumb {
   Source { coord: Coordinate },
-  Crumb { to: Coordinate, from: Box<Self> },
+  Crumb { to: Coordinate, from: Rc<Self> },
 }
 
 impl Breadcrumb {
