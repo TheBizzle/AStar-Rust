@@ -64,9 +64,9 @@ fn full_map_2() -> PathingMapTest {
     dist: Some(2),
     mapstring: pms(
       "asdf",
-      "\
+      &"
  *asdf
-G asdf",
+G asdf"[1..],
     ),
   }
 }
@@ -76,10 +76,10 @@ fn full_map_3() -> PathingMapTest {
     dist: None,
     mapstring: pms(
       "|",
-      "\
+      &"
  %  *|
 OG% %|
-%%   |",
+%%   |"[1..],
     ),
   }
 }
@@ -89,10 +89,10 @@ fn full_map_4() -> PathingMapTest {
     dist: Some(6),
     mapstring: pms(
       "|",
-      "\
+      &"
  %  *|
 OG% %|
-%    |",
+%    |"[1..],
     ),
   }
 }
@@ -102,7 +102,7 @@ fn full_map_5() -> PathingMapTest {
     dist: Some(39),
     mapstring: pms(
       "|",
-      "\
+      &"
                |
            *   |
                |
@@ -117,7 +117,7 @@ DDDDD    D     |
     DDDD D     |
                |
                |
-               ",
+               "[1..],
     ),
   }
 }
@@ -127,7 +127,7 @@ fn full_map_6() -> PathingMapTest {
     dist: Some(61),
     mapstring: pms(
       "|",
-      "\
+      &"
                |
            *   |
          O%%%%%|
@@ -142,7 +142,7 @@ DDDDD    D     |
     DDDD D     |
        % %     |
        % %     |
-               ",
+               "[1..],
     ),
   }
 }
@@ -160,7 +160,7 @@ fn full_map_9() -> PathingMapTest {
     dist: Some(14),
     mapstring: pms(
       "|",
-      "\
+      &"
 *|
  |
  |
@@ -175,7 +175,7 @@ fn full_map_9() -> PathingMapTest {
  |
  |
  |
-G",
+G"[1..],
     ),
   }
 }
@@ -185,7 +185,7 @@ fn full_map_10() -> PathingMapTest {
     dist: Some(14),
     mapstring: pms(
       "|",
-      "\
+      &"
 G|
  |
  |
@@ -200,7 +200,7 @@ G|
  |
  |
  |
-*",
+*"[1..],
     ),
   }
 }
@@ -210,8 +210,8 @@ fn full_map_11() -> PathingMapTest {
     dist: Some(7),
     mapstring: pms(
       "|",
-      "\
-       *      G",
+      &"
+       *      G"[1..],
     ),
   }
 }
@@ -221,7 +221,7 @@ fn full_map_12() -> PathingMapTest {
     dist: Some(8),
     mapstring: pms(
       "|",
-      "\
+      &"
  |
  |
  |
@@ -236,7 +236,7 @@ fn full_map_12() -> PathingMapTest {
  |
  |
  |
-G",
+G"[1..],
     ),
   }
 }
@@ -246,12 +246,12 @@ fn full_map_13() -> PathingMapTest {
     dist: Some(14),
     mapstring: pms(
       "|",
-      "\
+      &"
 *             G|
                |
                |
                |
-               ",
+               "[1..],
     ),
   }
 }
@@ -261,12 +261,12 @@ fn full_map_14() -> PathingMapTest {
     dist: Some(14),
     mapstring: pms(
       "|",
-      "\
+      &"
 G             *|
                |
                |
                |
-               ",
+               "[1..],
     ),
   }
 }
@@ -276,12 +276,12 @@ fn full_map_15() -> PathingMapTest {
     dist: Some(14),
     mapstring: pms(
       "|",
-      "\
+      &"
                |
                |
                |
                |
-*             G",
+*             G"[1..],
     ),
   }
 }
@@ -291,12 +291,12 @@ fn full_map_16() -> PathingMapTest {
     dist: Some(14),
     mapstring: pms(
       "|",
-      "\
+      &"
                |
                |
                |
                |
-G             *",
+G             *"[1..],
     ),
   }
 }
@@ -306,12 +306,12 @@ fn full_map_17() -> PathingMapTest {
     dist: Some(14),
     mapstring: pms(
       "|",
-      "\
+      &"
                |
                |
 *             G|
                |
-               ",
+               "[1..],
     ),
   }
 }
@@ -321,12 +321,12 @@ fn full_map_18() -> PathingMapTest {
     dist: Some(4),
     mapstring: pms(
       "|",
-      "\
+      &"
 *              |
                |
                |
                |
-G              ",
+G              "[1..],
     ),
   }
 }
@@ -336,12 +336,12 @@ fn full_map_19() -> PathingMapTest {
     dist: Some(4),
     mapstring: pms(
       "|",
-      "\
+      &"
 G              |
                |
                |
                |
-*              ",
+*              "[1..],
     ),
   }
 }
@@ -351,12 +351,12 @@ fn full_map_20() -> PathingMapTest {
     dist: Some(4),
     mapstring: pms(
       "|",
-      "\
+      &"
               *|
                |
                |
                |
-              G",
+              G"[1..],
     ),
   }
 }
@@ -366,12 +366,12 @@ fn full_map_21() -> PathingMapTest {
     dist: Some(4),
     mapstring: pms(
       "|",
-      "\
+      &"
               G|
                |
                |
                |
-              *",
+              *"[1..],
     ),
   }
 }
@@ -381,12 +381,12 @@ fn full_map_22() -> PathingMapTest {
     dist: Some(4),
     mapstring: pms(
       "|",
-      "\
+      &"
        *       |
                |
                |
                |
-       G       ",
+       G       "[1..],
     ),
   }
 }
@@ -396,12 +396,12 @@ fn full_map_23() -> PathingMapTest {
     dist: Some(4),
     mapstring: pms(
       "|",
-      "\
+      &"
        G       |
                |
                |
                |
-       *       ",
+       *       "[1..],
     ),
   }
 }
@@ -411,12 +411,12 @@ fn full_map_24() -> PathingMapTest {
     dist: Some(18),
     mapstring: pms(
       "|",
-      "\
+      &"
               G|
                |
                |
                |
-*              ",
+*              "[1..],
     ),
   }
 }
@@ -426,12 +426,12 @@ fn full_map_25() -> PathingMapTest {
     dist: Some(18),
     mapstring: pms(
       "|",
-      "\
+      &"
 G              |
                |
                |
                |
-              *",
+              *"[1..],
     ),
   }
 }
@@ -441,12 +441,12 @@ fn full_map_26() -> PathingMapTest {
     dist: Some(9),
     mapstring: pms(
       "|",
-      "\
+      &"
 G              |
                |
        *       |
                |
-               ",
+               "[1..],
     ),
   }
 }
@@ -456,12 +456,12 @@ fn full_map_27() -> PathingMapTest {
     dist: Some(20),
     mapstring: pms(
       "|",
-      "\
+      &"
 GD DD   D      |
    DD  D  D D  |
  D      D      |
     D  D     D |
- D  D      D  *",
+ D  D      D  *"[1..],
     ),
   }
 }
@@ -471,12 +471,12 @@ fn full_map_28() -> PathingMapTest {
     dist: Some(4),
     mapstring: pms(
       "|",
-      "\
+      &"
               G|
              D |
              D |
              D |
-             D*",
+             D*"[1..],
     ),
   }
 }
@@ -486,12 +486,12 @@ fn full_map_29() -> PathingMapTest {
     dist: Some(32),
     mapstring: pms(
       "|",
-      "\
+      &"
 G              |
                |
                |
 DDDDDDDDDDDDDD |
-*              ",
+*              "[1..],
     ),
   }
 }
@@ -501,12 +501,12 @@ fn full_map_30() -> PathingMapTest {
     dist: Some(15),
     mapstring: pms(
       "|",
-      "\
+      &"
       D        |
       D        |
       D*D      |
       DDD      |
-G              ",
+G              "[1..],
     ),
   }
 }
@@ -516,12 +516,12 @@ fn full_map_31() -> PathingMapTest {
     dist: Some(13),
     mapstring: pms(
       "|",
-      "\
+      &"
                |
       D D      |
       D*D      |
       DDD      |
-G              ",
+G              "[1..],
     ),
   }
 }
@@ -531,12 +531,12 @@ fn full_map_32() -> PathingMapTest {
     dist: Some(13),
     mapstring: pms(
       "|",
-      "\
+      &"
         D      |
       D D      |
       D*D      |
       DDD      |
-G              ",
+G              "[1..],
     ),
   }
 }
@@ -546,12 +546,12 @@ fn full_map_33() -> PathingMapTest {
     dist: Some(9),
     mapstring: pms(
       "|",
-      "\
+      &"
       D        |
       D        |
       D*D      |
       D D      |
-G              ",
+G              "[1..],
     ),
   }
 }
@@ -561,12 +561,12 @@ fn full_map_34() -> PathingMapTest {
     dist: Some(9),
     mapstring: pms(
       "|",
-      "\
+      &"
       D        |
       D        |
        *D      |
       DDD      |
-G              ",
+G              "[1..],
     ),
   }
 }
@@ -576,12 +576,12 @@ fn full_map_35() -> PathingMapTest {
     dist: None,
     mapstring: pms(
       "|",
-      "\
+      &"
                |
       DDD      |
       D*D      |
       DDD      |
-G              ",
+G              "[1..],
     ),
   }
 }
@@ -591,7 +591,7 @@ fn full_map_36() -> PathingMapTest {
     dist: None,
     mapstring: pms(
       "|",
-      "\
+      &"
                                               |
                                               |
                                               |
@@ -608,7 +608,7 @@ fn full_map_36() -> PathingMapTest {
                                               |
        G                                      |
                                               |
-                                              ",
+                                              "[1..],
     ),
   }
 }
@@ -618,12 +618,12 @@ fn full_map_37() -> PathingMapTest {
     dist: None,
     mapstring: pms(
       "|",
-      "\
+      &"
                |
       DDD      |
       DGD      |
       DDD      |
-*              ",
+*              "[1..],
     ),
   }
 }
@@ -633,7 +633,7 @@ fn full_map_38() -> PathingMapTest {
     dist: None,
     mapstring: pms(
       "|",
-      "\
+      &"
                                               |
                                               |
                                               |
@@ -650,7 +650,7 @@ fn full_map_38() -> PathingMapTest {
                                               |
        *                                      |
                                               |
-                                              ",
+                                              "[1..],
     ),
   }
 }
@@ -660,7 +660,7 @@ fn full_map_39() -> PathingMapTest {
     dist: None,
     mapstring: pms(
       "|",
-      "\
+      &"
                                               |
  *                                            |
                 DDDDDDDDDDDDDDDDDDDDDDDDDDDDDD|
@@ -677,7 +677,7 @@ fn full_map_39() -> PathingMapTest {
                           D   D   D D D D D D |
 DDDDDDDDDDDDDDDDDDDDDDDDD   D     D   D   D   |
 DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD|
-                        DDDDDDDDDDDDDDDDDDDDDD",
+                        DDDDDDDDDDDDDDDDDDDDDD"[1..],
     ),
   }
 }
