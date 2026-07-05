@@ -5,9 +5,9 @@ edition = "2024"
 rust-version = "1.96"
 
 authors = ["TheBizzle <jason.bertsche@gmail.com"]
-description = "Tests for PathFindingCore"
+description = "Tests for pathfinding algorithms"
 license = "BSD-3"
-repository = "https://github.com/TheBizzle/PathFindingCore-Rust"
+repository = "https://github.com/TheBizzle/AStar-Rust"
 readme = "README.md"
 
 keywords = ["astar", "maze", "navigation", "pathfinding", "tilemap"]
