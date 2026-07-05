@@ -37,11 +37,7 @@ impl PathingMap {
   pub fn insert_query(&mut self, coords: Vec<Coordinate>) {
     for coord in coords {
       if let Some(&terrain) = self.grid.map.get(&coord) {
-        if terrain == Myself {
-          panic!("Cannot turn Self terrain into a query!");
-        } else if terrain == Goal {
-          panic!("Cannot turn Goal terrain into a query!");
-        } else {
+        if terrain != Myself && terrain != Goal {
           self.grid.map.insert(coord, Query);
         }
       } else {
