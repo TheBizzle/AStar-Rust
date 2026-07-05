@@ -26,11 +26,11 @@ chain_width                    = 110
 single_line_if_else_max_width  = 50
 single_line_let_else_max_width = 50
 
-struct_lit_width     = 30
-struct_variant_width = 35
+struct_lit_width     = 90
+struct_variant_width = 90
 
-array_width        = 60
-attr_fn_like_width = 70
+array_width        = 90
+attr_fn_like_width = 90
 
 wrap_comments               = true
 format_code_in_doc_comments = true

@@ -253,10 +253,7 @@ mod tests {
     max_coord: Coordinate,
     terrains: &[Terrain],
   ) {
-    let pms = PathingMapString {
-      contents: str_grid.to_string(),
-      delim: "|".to_string(),
-    };
+    let pms = PathingMapString { contents: str_grid.to_string(), delim: "|".to_string() };
     let actual = pms.as_pmd();
 
     if actual.start != start {

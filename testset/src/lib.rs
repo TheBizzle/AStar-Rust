@@ -51,17 +51,11 @@ pub struct PathingMapTest {
 }
 
 fn pms(delim: &str, contents: &str) -> PathingMapString {
-  PathingMapString {
-    contents: contents[1..].to_string(),
-    delim: format!("{delim}\n"),
-  }
+  PathingMapString { contents: contents[1..].to_string(), delim: format!("{delim}\n") }
 }
 
 fn full_map_1() -> PathingMapTest {
-  PathingMapTest {
-    dist: Some(14),
-    mapstring: pms("akjshdkjashldjaksdhljakds", "*             G"),
-  }
+  PathingMapTest { dist: Some(14), mapstring: pms("akjshdkjashldjaksdhljakds", "*             G") }
 }
 
 fn full_map_2() -> PathingMapTest {
@@ -153,17 +147,11 @@ DDDDD    D     |
 }
 
 fn full_map_7() -> PathingMapTest {
-  PathingMapTest {
-    dist: None,
-    mapstring: pms("|", "*DG"),
-  }
+  PathingMapTest { dist: None, mapstring: pms("|", "*DG") }
 }
 
 fn full_map_8() -> PathingMapTest {
-  PathingMapTest {
-    dist: Some(14),
-    mapstring: pms("|", "G             *"),
-  }
+  PathingMapTest { dist: Some(14), mapstring: pms("|", "G             *") }
 }
 
 fn full_map_9() -> PathingMapTest {

@@ -5,18 +5,12 @@ mod tests {
   use core::pathingmap::PathingMap;
 
   fn grid_from_string(s: &str) -> PathingMap {
-    let pms = PathingMapString {
-      contents: s.into(),
-      delim: "|".into(),
-    };
+    let pms = PathingMapString { contents: s.into(), delim: "|".into() };
     PathingMap { grid: pms.as_pmd().grid }
   }
 
   fn base_map() -> PathingMap {
-    let pms = PathingMapString {
-      contents: " DGD | DDD |%%%% |DD %%|*D  %".into(),
-      delim: "|".into(),
-    };
+    let pms = PathingMapString { contents: " DGD | DDD |%%%% |DD %%|*D  %".into(), delim: "|".into() };
     PathingMap { grid: pms.as_pmd().grid }
   }
 
@@ -70,11 +64,7 @@ mod tests {
   #[test]
   fn test_insert_path_2() {
     let mut base = base_map();
-    base.insert_path(vec![
-      Coordinate { x: 2, y: 1 },
-      Coordinate { x: 2, y: 0 },
-      Coordinate { x: 3, y: 0 },
-    ]);
+    base.insert_path(vec![Coordinate { x: 2, y: 1 }, Coordinate { x: 2, y: 0 }, Coordinate { x: 3, y: 0 }]);
     test_map("insertPath 2", &base, &grid_from_string(" DGD | DDD |%%%% |DDx%%|*Dxx%"));
   }
 

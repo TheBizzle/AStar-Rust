@@ -13,9 +13,7 @@ mod tests {
   fn simple_source_1() {
     check(
       "Simple source 1",
-      &Breadcrumb::Source {
-        coord: Coordinate { x: 0, y: 0 },
-      },
+      &Breadcrumb::Source { coord: Coordinate { x: 0, y: 0 } },
       &[Coordinate { x: 0, y: 0 }],
     );
   }
@@ -24,9 +22,7 @@ mod tests {
   fn simple_source_2() {
     check(
       "Simple source 2",
-      &Breadcrumb::Source {
-        coord: Coordinate { x: 1, y: 1 },
-      },
+      &Breadcrumb::Source { coord: Coordinate { x: 1, y: 1 } },
       &[Coordinate { x: 1, y: 1 }],
     );
   }
@@ -35,9 +31,7 @@ mod tests {
   fn simple_source_3() {
     check(
       "Simple source 3",
-      &Breadcrumb::Source {
-        coord: Coordinate { x: 3, y: 8 },
-      },
+      &Breadcrumb::Source { coord: Coordinate { x: 3, y: 8 } },
       &[Coordinate { x: 3, y: 8 }],
     );
   }
@@ -48,9 +42,7 @@ mod tests {
       "Two-item crumb",
       &Breadcrumb::Crumb {
         to: Coordinate { x: 0, y: 0 },
-        from: Box::new(Breadcrumb::Source {
-          coord: Coordinate { x: 3, y: 8 },
-        }),
+        from: Box::new(Breadcrumb::Source { coord: Coordinate { x: 3, y: 8 } }),
       },
       &[Coordinate { x: 3, y: 8 }, Coordinate { x: 0, y: 0 }],
     );
@@ -64,16 +56,10 @@ mod tests {
         to: Coordinate { x: 1, y: 7 },
         from: Box::new(Breadcrumb::Crumb {
           to: Coordinate { x: 0, y: 0 },
-          from: Box::new(Breadcrumb::Source {
-            coord: Coordinate { x: 3, y: 8 },
-          }),
+          from: Box::new(Breadcrumb::Source { coord: Coordinate { x: 3, y: 8 } }),
         }),
       },
-      &[
-        Coordinate { x: 3, y: 8 },
-        Coordinate { x: 0, y: 0 },
-        Coordinate { x: 1, y: 7 },
-      ],
+      &[Coordinate { x: 3, y: 8 }, Coordinate { x: 0, y: 0 }, Coordinate { x: 1, y: 7 }],
     );
   }
 }
