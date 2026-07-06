@@ -141,6 +141,6 @@ fn draw_results(step_data: &mut StepData) {
     let goal_data = step_data.loc_data_map.get(&goal_coord).expect(msg1);
     let msg2 = &format!("We reached the goal, so this should have had a breadcrumb: {goal_coord:?}");
     let coords = goal_data.breadcrumb_opt.as_ref().expect(msg2).to_sequence();
-    step_data.pathing_map.insert_query(coords);
+    step_data.pathing_map.insert_path(coords);
   }
 }

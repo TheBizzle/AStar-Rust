@@ -21,11 +21,7 @@ impl PathingMap {
   pub fn insert_path(&mut self, coords: Vec<Coordinate>) {
     for coord in coords {
       if let Some(&terrain) = self.grid.map.get(&coord) {
-        if terrain == Myself {
-          panic!("Cannot turn Myself terrain into a path!");
-        } else if terrain == Goal {
-          panic!("Cannot turn Goal terrain into a path!");
-        } else {
+        if terrain != Myself && terrain != Goal {
           self.grid.map.insert(coord, Path);
         }
       } else {
