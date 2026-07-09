@@ -1,8 +1,8 @@
 use std::collections::HashMap;
 use std::rc::Rc;
 
-use core::coordinate::{Breadcrumb, Coordinate};
-use core::pathingmap::PathingMap;
+use pf_core::coordinate::{Breadcrumb, Coordinate};
+use pf_core::pathingmap::PathingMap;
 
 use super::coordqueue::CoordQueue;
 use super::heuristic::Heuristic;

@@ -6,14 +6,10 @@ version = 4
 name = "astar"
 version = "0.1.0"
 dependencies = [
- "core",
  "paste",
+ "pf_core",
  "testset",
 ]
-
-[[package]]
-name = "core"
-version = "0.1.0"
 
 [[package]]
 name = "paste"
@@ -22,8 +18,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
 
 [[package]]
+name = "pf_core"
+version = "0.1.0"
+
+[[package]]
 name = "testset"
 version = "0.1.0"
 dependencies = [
- "core",
+ "pf_core",
 ]

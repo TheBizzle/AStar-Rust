@@ -16,7 +16,7 @@ categories = ["algorithms"]
 publish = false
 
 [dependencies]
-core = { path = "../core" }
+pf_core = { path = "../pf_core" }
 
 [lints.rust]
 unsafe_code = "forbid"

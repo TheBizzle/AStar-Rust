@@ -2,7 +2,7 @@ use std::cmp::Ordering;
 use std::collections::BinaryHeap;
 use std::rc::Rc;
 
-use core::coordinate::{Breadcrumb, Coordinate};
+use pf_core::coordinate::{Breadcrumb, Coordinate};
 
 #[derive(Debug, Default)]
 pub struct CoordQueue {

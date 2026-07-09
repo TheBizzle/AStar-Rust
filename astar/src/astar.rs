@@ -1,11 +1,11 @@
 use std::collections::HashMap;
 use std::rc::Rc;
 
-use core::coordinate::Breadcrumb::{Crumb, Source};
-use core::coordinate::Coordinate;
-use core::interpreter::PathingMapString;
-use core::pathingmap::PathingMap;
-use core::status::RunResult::{self, FailedRun, SuccessfulRun};
+use pf_core::coordinate::Breadcrumb::{Crumb, Source};
+use pf_core::coordinate::Coordinate;
+use pf_core::interpreter::PathingMapString;
+use pf_core::pathingmap::PathingMap;
+use pf_core::status::RunResult::{self, FailedRun, SuccessfulRun};
 
 use super::coordqueue::{CoordQueue, MiniLoc};
 use super::heuristic::Heuristic;

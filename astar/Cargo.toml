@@ -16,7 +16,7 @@ categories = ["algorithms"]
 publish = false
 
 [dependencies]
-core = { path = "../core" }
+pf_core = { path = "../pf_core" }
 testset = { path = "../testset" }
 paste = "1"
 

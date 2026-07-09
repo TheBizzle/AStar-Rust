@@ -1,9 +1,9 @@
 // First version created by Claude Sonnet 5
 #[cfg(test)]
 mod tests {
-  use core::coordinate::Coordinate;
-  use core::interpreter::PathingMapString;
-  use core::pathingmap::PathingMap;
+  use pf_core::coordinate::Coordinate;
+  use pf_core::interpreter::PathingMapString;
+  use pf_core::pathingmap::PathingMap;
 
   fn grid_from_string(s: &str) -> PathingMap {
     let pms = PathingMapString { contents: s.into(), delim: "|".into() };

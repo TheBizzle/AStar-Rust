@@ -2,9 +2,9 @@
 
 #[cfg(test)]
 mod tests {
-  use core::coordinate::Coordinate;
-  use core::interpreter::{PathingGrid, PathingMapString};
-  use core::terrain::Terrain::{self, Empty, Goal, Mound, Myself, Wall, Water};
+  use pf_core::coordinate::Coordinate;
+  use pf_core::interpreter::{PathingGrid, PathingMapString};
+  use pf_core::terrain::Terrain::{self, Empty, Goal, Mound, Myself, Wall, Water};
 
   const M5X5P1: &str = "DDDDD|DG  D|D   D|D  *D|DDDDD";
   const M5X5P2: &str = " DGD | DDD |%%%% |DD %%|*D  %";

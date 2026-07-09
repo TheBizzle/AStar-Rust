@@ -1,3 +1,3 @@
 [workspace]
-members = ["astar", "core", "testset"]
+members = ["astar", "pf_core", "testset"]
 resolver = "3"

@@ -4,7 +4,7 @@ mod tests {
 
   use paste::paste;
 
-  use core::status::RunResult::SuccessfulRun;
+  use pf_core::status::RunResult::SuccessfulRun;
   use testset::PathingMapTest;
 
   use astar::astar::run;

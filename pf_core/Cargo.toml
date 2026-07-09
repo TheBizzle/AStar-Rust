@@ -1,10 +1,10 @@
 [package]
-name = "core"
+name = "pf_core"
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.96"
 
-authors = ["TheBizzle <jason.bertsche@gmail.com"]
+authors = ["TheBizzle <jason.bertsche@gmail.com>"]
 description = "The building blocks for constructing and testing your own pathfinding algorithm in Rust and visually representing it in ASCII."
 license = "BSD-3"
 repository = "https://github.com/TheBizzle/AStar-Rust"

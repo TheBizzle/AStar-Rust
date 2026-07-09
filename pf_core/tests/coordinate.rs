@@ -4,7 +4,7 @@
 mod tests {
   use std::rc::Rc;
 
-  use core::coordinate::{Breadcrumb, Coordinate};
+  use pf_core::coordinate::{Breadcrumb, Coordinate};
 
   fn check(desc: &str, crumbs: &Breadcrumb, expected: &[Coordinate]) {
     let actual = crumbs.to_sequence();

@@ -1,4 +1,4 @@
-use core::coordinate::Coordinate;
+use pf_core::coordinate::Coordinate;
 
 #[derive(Clone, Debug)]
 pub enum Heuristic {

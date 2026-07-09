@@ -1,4 +1,4 @@
-use core::interpreter::PathingMapString;
+use pf_core::interpreter::PathingMapString;
 
 #[must_use]
 pub fn all_maps() -> [PathingMapTest; 39] {
