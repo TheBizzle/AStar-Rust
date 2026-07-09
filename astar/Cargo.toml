@@ -18,7 +18,7 @@ publish = false
 [dependencies]
 pf_core = { path = "../pf_core" }
 testset = { path = "../testset" }
-paste = "1"
+paste = { version = "1.0.15" }
 
 [lints.rust]
 unsafe_code = "forbid"
