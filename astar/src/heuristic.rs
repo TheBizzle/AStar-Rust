@@ -1,6 +1,6 @@
 use pf_core::coordinate::Coordinate;
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Eq, Hash, PartialEq)]
 pub enum Heuristic {
   Euclidean,
   Manhattan,
