@@ -72,10 +72,10 @@ impl PathingMap {
     coords.sort();
 
     if let Some(&max_coord) = coords.last() {
-      let mut lines: Vec<String> = Vec::with_capacity(max_coord.y);
+      let mut lines: Vec<String> = Vec::with_capacity(max_coord.y + 1);
 
       for y in 0..=(max_coord.y) {
-        let mut str = String::with_capacity(max_coord.x);
+        let mut str = String::with_capacity(max_coord.x + 1);
         for x in 0..=(max_coord.x) {
           let coord = Coordinate { x, y };
           let msg = format!("Coordinate {max_coord:?} does not exist!");
