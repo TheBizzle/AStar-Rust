@@ -245,13 +245,8 @@ mod tests {
   }
 
   fn run_case(
-    failures: &mut Vec<String>,
-    desc: &str,
-    str_grid: &str,
-    start: Coordinate,
-    goal: Coordinate,
-    max_coord: Coordinate,
-    terrains: &[Terrain],
+    failures: &mut Vec<String>, desc: &str, str_grid: &str, start: Coordinate, goal: Coordinate,
+    max_coord: Coordinate, terrains: &[Terrain],
   ) {
     let pms = PathingMapString { contents: str_grid.to_string(), delim: "|".to_string() };
     let actual = pms.as_pmd();
